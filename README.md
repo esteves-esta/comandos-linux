@@ -7,16 +7,40 @@ Comandos utéis de linux listados aqui para ficarem mais acessiveis para uso pes
         - [*Similar a window + r*](#similar-a-window--r)
         - [*Alternar telas*](#alternar-telas)
     - [Comandos terminal](#comandos-terminal)
+        - [*Mostra caminho do diretorio atual*](#mostra-caminho-do-diretorio-atual)
         - [*Abrir arquivo .appImage*](#abrir-arquivo-appimage)
-        - [*diz oque um comando faz*](#diz-oque-um-comando-faz)
-        - [*ver histórico de comandos*](#ver-hist%c3%b3rico-de-comandos)
+        - [*Diz oque um comando faz*](#diz-oque-um-comando-faz)
+        - [*Ver histórico de comandos*](#ver-hist%c3%b3rico-de-comandos)
         - [*Criar atalhos para comandos*](#criar-atalhos-para-comandos)
         - [*Editar arquivos no terminal*](#editar-arquivos-no-terminal)
         - [*Mostrar ip da máquina*](#mostrar-ip-da-m%c3%a1quina)
-        - [*comprime ou expande arquivo*](#comprime-ou-expande-arquivo)
+        - [*Comprime ou expande arquivo*](#comprime-ou-expande-arquivo)
         - [*Mostra arquivo comprimido*](#mostra-arquivo-comprimido)
         - [*Mostra processos suspensos*](#mostra-processos-suspensos)
         - [*Matar processos*](#matar-processos)
+        - [*Procura arquivo*](#procura-arquivo)
+    - [Comandos gerais](#comandos-gerais)
+        - [*Exibir arquivo no terminal*](#exibir-arquivo-no-terminal)
+        - [*Criar arquivo vazio*](#criar-arquivo-vazio)
+        - [*Novo diretorio*](#novo-diretorio)
+        - [*Remove diretorios vazios*](#remove-diretorios-vazios)
+        - [*Remover arquivo*](#remover-arquivo)
+        - [*Copiar arquivo*](#copiar-arquivo)
+        - [*Mover arquivo*](#mover-arquivo)
+        - [*Comparar dois arquivos*](#comparar-dois-arquivos)
+        - [*Encontrar arquivo*](#encontrar-arquivo)
+        - [*Programas em execução e seu consumo de hardware*](#programas-em-execu%c3%a7%c3%a3o-e-seu-consumo-de-hardware)
+        - [*Muda protecao de arquivo*](#muda-protecao-de-arquivo)
+        - [*Muda dono ou grupo de um arquivo*](#muda-dono-ou-grupo-de-um-arquivo)
+        - [*Muda grupo de um arquivo*](#muda-grupo-de-um-arquivo)
+        - [*Procura um arquivo por um padrão*](#procura-um-arquivo-por-um-padr%c3%a3o)
+        - [*Links/atalhos para arquivos/diretório*](#linksatalhos-para-arquivosdiret%c3%b3rio)
+        - [*Exibe variáveis de ambiente*](#exibe-vari%c3%a1veis-de-ambiente)
+        - [*Define variáveis da sessão do shell*](#define-vari%c3%a1veis-da-sess%c3%a3o-do-shell)
+        - [*Total de palavras*](#total-de-palavras)
+        - [*Calendario no terminal*](#calendario-no-terminal)
+        - [*Mostra data atual*](#mostra-data-atual)
+        - [*maquina usuário logado*](#maquina-usu%c3%a1rio-logado)
     - [APT-GET](#apt-get)
         - [*Atualiza indice do repositorio*](#atualiza-indice-do-repositorio)
         - [*Instalar pacote/aplicativo*](#instalar-pacoteaplicativo)
@@ -33,25 +57,6 @@ Comandos utéis de linux listados aqui para ficarem mais acessiveis para uso pes
     - [Arquivos .deb](#arquivos-deb)
         - [*Descompactar arquivo .deb*](#descompactar-arquivo-deb)
         - [*In case dpkg complains about missing dependencies, run:*](#in-case-dpkg-complains-about-missing-dependencies-run)
-    - [Comandos gerais](#comandos-gerais)
-        - [*Exibir arquivo no terminal*](#exibir-arquivo-no-terminal)
-        - [*Criar arquivo vazio*](#criar-arquivo-vazio)
-        - [*Novo diretorio*](#novo-diretorio)
-        - [*Remover arquivo*](#remover-arquivo)
-        - [*Copiar arquivo*](#copiar-arquivo)
-        - [*Mover arquivo*](#mover-arquivo)
-        - [*Comparar dois arquivos*](#comparar-dois-arquivos)
-        - [*Encontrar arquivo*](#encontrar-arquivo)
-        - [*Programas em execução e seu consumo de hardware*](#programas-em-execu%c3%a7%c3%a3o-e-seu-consumo-de-hardware)
-        - [*Muda protecao de arquivo*](#muda-protecao-de-arquivo)
-        - [*Muda dono ou grupo de um arquivo(change owner)*](#muda-dono-ou-grupo-de-um-arquivochange-owner)
-        - [*Muda grupo de um arquivo*](#muda-grupo-de-um-arquivo)
-        - [*Procura um arquivo por um padrão*](#procura-um-arquivo-por-um-padr%c3%a3o)
-        - [*Exibe variáveis de ambiente*](#exibe-vari%c3%a1veis-de-ambiente)
-        - [*Define variáveis da sessão do shell*](#define-vari%c3%a1veis-da-sess%c3%a3o-do-shell)
-        - [*Total de palavras*](#total-de-palavras)
-        - [*Calendario no terminal*](#calendario-no-terminal)
-        - [*Mostra data atual*](#mostra-data-atual)
     - [React Native](#react-native)
         - [*Comandos usados para lidar com problemas no watchman*](#comandos-usados-para-lidar-com-problemas-no-watchman)
 
@@ -72,27 +77,28 @@ Comandos utéis de linux listados aqui para ficarem mais acessiveis para uso pes
 
 ### Comandos terminal
 
+##### *Mostra caminho do diretorio atual*
+    pwd
+
 ##### *Abrir arquivo .appImage*
     chmod u+x arquivo.AppImage
 
-##### *diz oque um comando faz*
+##### *Diz oque um comando faz*
     whatis comando
     
-##### *ver histórico de comandos*
+##### *Ver histórico de comandos*
     history
 
 ##### *Criar atalhos para comandos*
     alias nomeAtalho="comando completo"
 
 ##### *Editar arquivos no terminal*
-
     nano caminho/nome-do-arquivo
 
 ##### *Mostrar ip da máquina*
-
     ip addr show
 
-##### *comprime ou expande arquivo*
+##### *Comprime ou expande arquivo*
     gzip
     
 ##### *Mostra arquivo comprimido*
@@ -104,6 +110,77 @@ Comandos utéis de linux listados aqui para ficarem mais acessiveis para uso pes
 ##### *Matar processos*
     kill -9 100
 
+##### *Procura arquivo*
+    find /pasta -name Arq* (procura arquivos na /pasta que comecam com nome Arq)
+---
+
+### Comandos gerais
+
+##### *Exibir arquivo no terminal*
+    cat -b
+
+##### *Criar arquivo vazio*
+    touch nomearquivo
+
+##### *Novo diretorio*
+    mkdir -p pasta/pastaDentroDePasta
+
+##### *Remove diretorios vazios*
+    rmdir pastaVazia
+
+##### *Remover arquivo*
+    rm -i nome (pede confirmação para remover)
+
+##### *Copiar arquivo*
+    cp nome /pastaDestino
+
+##### *Mover arquivo*
+    mv nome novoNome
+    mv nome novoDestino/
+
+##### *Comparar dois arquivos*
+    cmp arquivo arquivo2
+
+##### *Encontrar arquivo*
+    locate nome
+
+##### *Programas em execução e seu consumo de hardware*
+    top
+
+##### *Muda protecao de arquivo*
+    > chmod 750 arquivo
+    > chmod u+x arquivo 
+    > chmod a-x arquivo
+
+##### *Muda dono ou grupo de um arquivo*
+    chown
+
+##### *Muda grupo de um arquivo*
+    chgrp
+
+##### *Procura um arquivo por um padrão*
+    grep
+
+##### *Links/atalhos para arquivos/diretório*
+    ln arquivo diretorioDestino
+
+##### *Exibe variáveis de ambiente*
+    env (ou printenv)
+
+##### *Define variáveis da sessão do shell*
+    set
+
+##### *Total de palavras*
+    wc nomearquivo.txt
+
+##### *Calendario no terminal*
+    cal
+
+##### *Mostra data atual*
+    date
+
+##### *maquina usuário logado*
+    hostname
 ---
 
 ### APT-GET
@@ -156,72 +233,13 @@ Comandos utéis de linux listados aqui para ficarem mais acessiveis para uso pes
 
 --------
 
-### Comandos gerais
-
-
-##### *Exibir arquivo no terminal*
-    cat
-
-##### *Criar arquivo vazio*
-    touch nomearquivo
-
-##### *Novo diretorio*
-    mkdir novapasta
-
-##### *Remover arquivo*
-    rm nome
-
-##### *Copiar arquivo*
-    cp nome
-
-##### *Mover arquivo*
-    mv nome
-
-##### *Comparar dois arquivos*
-    cmp arquivo arquivo2
-
-##### *Encontrar arquivo*
-    locate nome
-
-##### *Programas em execução e seu consumo de hardware*
-    top
-
-##### *Muda protecao de arquivo*
-    chmod
-
-##### *Muda dono ou grupo de um arquivo(change owner)*
-    chown
-
-##### *Muda grupo de um arquivo*
-    chgrp
-
-##### *Procura um arquivo por um padrão*
-    grep
-
-##### *Exibe variáveis de ambiente*
-    env (ou printenv)
-
-##### *Define variáveis da sessão do shell*
-    set
-
-##### *Total de palavras*
-    wc nomearquivo.txt
-
-##### *Calendario no terminal*
-    cal
-
-##### *Mostra data atual*
-    date
-
----
-
 ### React Native
 
 ##### *Comandos usados para lidar com problemas no watchman*
-    watchman watch-del-all
+    > watchman watch-del-all
 
-    watchman shutdown-server
+    > watchman shutdown-server
 
-    echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_watches && echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_queued_events && echo 999999 | sudo tee -a /proc/sys/fs/inotify/  max_user_instances && watchman shutdown-server && sudo sysctl -p
+    > echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_watches && echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_queued_events && echo 999999 | sudo tee -a /proc/sys/fs/inotify/  max_user_instances && watchman shutdown-server && sudo sysctl -p
 
 ---
