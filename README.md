@@ -57,8 +57,6 @@ Comandos utéis de linux listados aqui para ficarem mais acessiveis para uso pes
     - [Arquivos .deb](#arquivos-deb)
         - [*Descompactar arquivo .deb*](#descompactar-arquivo-deb)
         - [*In case dpkg complains about missing dependencies, run:*](#in-case-dpkg-complains-about-missing-dependencies-run)
-    - [React Native](#react-native)
-        - [*Comandos usados para lidar com problemas no watchman*](#comandos-usados-para-lidar-com-problemas-no-watchman)
 
 ---
 
@@ -232,14 +230,3 @@ Comandos utéis de linux listados aqui para ficarem mais acessiveis para uso pes
     sudo apt -f install
 
 --------
-
-### React Native
-
-##### *Comandos usados para lidar com problemas no watchman*
-    > watchman watch-del-all
-
-    > watchman shutdown-server
-
-    > echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_watches && echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_queued_events && echo 999999 | sudo tee -a /proc/sys/fs/inotify/  max_user_instances && watchman shutdown-server && sudo sysctl -p
-
----
