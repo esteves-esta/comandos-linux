@@ -9,6 +9,7 @@ Comandos utéis de linux listados aqui para ficarem mais acessiveis para uso pes
     - [Comandos terminal](#comandos-terminal)
         - [*Mostra caminho do diretorio atual*](#mostra-caminho-do-diretorio-atual)
         - [*Abrir arquivo .appImage*](#abrir-arquivo-appimage)
+        - [*Abrir arquivo executável*](#abrir-arquivo-execut%c3%a1vel)
         - [*Diz oque um comando faz*](#diz-oque-um-comando-faz)
         - [*Ver histórico de comandos*](#ver-hist%c3%b3rico-de-comandos)
         - [*Criar atalhos para comandos*](#criar-atalhos-para-comandos)
@@ -80,6 +81,9 @@ Comandos utéis de linux listados aqui para ficarem mais acessiveis para uso pes
 
 ##### *Abrir arquivo .appImage*
     chmod u+x arquivo.AppImage
+    
+##### *Abrir arquivo executável*
+    ./nomeDoArquivo
 
 ##### *Diz oque um comando faz*
     whatis comando
