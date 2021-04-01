@@ -58,7 +58,7 @@ Comandos utéis de linux listados aqui para ficarem mais acessiveis para uso pes
     - [Arquivos .deb](#arquivos-deb)
         - [*Descompactar arquivo .deb*](#descompactar-arquivo-deb)
         - [*In case dpkg complains about missing dependencies, run:*](#in-case-dpkg-complains-about-missing-dependencies-run)
-
+    - [Atualizar node](#atualizar-node)
 ---
 
 ### Atalhos para interface gráfica do linux
@@ -234,3 +234,21 @@ Comandos utéis de linux listados aqui para ficarem mais acessiveis para uso pes
     sudo apt -f install
 
 --------
+
+### Atualizar node
+
+1. Verifica versão atual
+    `nvm ls`
+
+2. Ver todas as versões
+    `nvm ls-remote`
+
+3. Instalar versão desejada    
+    `nvm install [VERSION]`
+    
+4. Usar versão desejada
+    `nvm use [VESSION]`
+
+5. Alterar versão padrão para versão desejada [esse é o comando de muda a versão global padrão do pc]
+    `nvm alias default [VERSION]`
+    
